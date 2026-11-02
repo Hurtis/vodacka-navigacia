@@ -1,0 +1,298 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.151324, 48.128480]
+      },
+      "properties": {
+        "img":"/img/maly-dunaj/zaciatok.jpg",
+        "name": "Začiatok Malého dunaja",
+        "type": ["ine"]
+      }
+    }, 
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.207469, 48.149558]
+      },
+      "properties": {
+        "img":"/img/maly-dunaj/vrakuna.jpg",
+        "name": "Prístavisko vrakuňa",
+        "description": "nástup / výstup",
+        "type": ["prístavisko"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.238926, 48.153141]
+      },
+      "properties": {
+        "img":"/img/maly-dunaj/most-letisko.jpg",
+        "name": "Most Letisko",
+        "description": "",
+        "type":["most"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.262493, 48.153942]
+      },
+      "properties": {
+        "img":"/img/maly-dunaj/sutok-blatina.jpg",
+        "name": "Sútok Blatiná",
+        "description": "sútok riek",
+        "type":["sútok"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.282894, 48.157407]
+      },
+      "properties": {
+        "img":"/img/maly-dunaj/bufet-zalesie.jpg",
+        "name": "Bufet Zálesie",
+        "description": "nástup / výstup, bufet",
+        "type": ["prístavisko","bufet"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.280559, 48.160898]
+      },
+      "properties": {
+        "img":"/img/maly-dunaj/korzo-zalesie.jpg",
+        "name": "Korzo Zálesie",
+        "description": "nástup / výstup",
+        "type": ["prístavisko"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.301220, 48.178587]
+      },
+      "properties": {
+        "img":"/img/maly-dunaj/totemova-luka.jpg",
+        "name": "Totemová lúka",
+        "description": "",
+        "type":["ine"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.334967, 48.174285]
+      },
+      "properties": {
+        "name": "Vodná elektráreň Nová Dedinka",
+        "description": "nástup / výstup, Kemp, prenáška - pravý breh",
+        "type": ["prístavisko", "kemp", "bufet"]
+      }
+    },
+        {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.341945, 48.153019]
+      },
+      "properties": {
+        "name": "Prístavisko Tomášov",
+        "description": "nástup / výstup",
+        "type": ["prístavisko"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.356188, 48.160763]
+      },
+      "properties": {
+        "img":"/img/maly-dunaj/vcelarsky-ostrov.jpg",
+        "name": "Včelársky ostrov",
+        "description": "nástup / výstup",
+        "type": ["prístavisko","most"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.440973, 48.144515]
+      },
+      "properties": {
+        "name": "Prístavisko Laci",
+        "description": "nástup / výstup",
+        "type": ["prístavisko"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.483014, 48.142866]
+      },
+      "properties": {  
+        "name": "Táborisko pod krížom",
+        "description": "nástup / výstup, kemp, bufet",
+        "type": ["prístavisko", "kemp"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.505191, 48.125245]
+      },
+      "properties": {
+        "img":"/img/maly-dunaj/mlyn-jelka.jpg",
+        "name": "Vodny mlyn Jelka",
+        "description": "nástup / výstup, kemp, bufet, pamiatka",
+        "type": ["prístavisko", "kemp", "bufet", "pamiatka"]
+      }
+    },  
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.562782,48.109713]
+      },
+      "properties": {
+        "name": "Bufet Makala",
+        "description": "kemp, bufet",
+        "type": ["kemp", "bufet"]
+      }
+    },  
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.590844, 48.096931]
+      },
+      "properties": {
+        
+        "name": "Prístavisko Potônske lúky",
+        "description": "nástup / výstup",
+        "type": ["prístavisko"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+
+        "coordinates": [17.618705, 48.083092]
+      },
+      "properties": {
+        
+        "name": "Prístavisko Orechová potôň",
+        "description": "nástup / výstup",
+        "type": ["prístavisko"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.651950, 48.086403]
+      },
+      "properties": {
+        
+        "name": "Vodná elektráren Velke Blahovo",
+        "description": "prenáška ľavý breh",
+        "type": ["prístavisko"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.666216, 48.088355]
+      },
+      "properties": {
+        "img":"/img/maly-dunaj/mlyn-tomasikovo.jpg",
+        "name": "Vodný mlyn Tomášikovo",
+        "type": ["pamiatka", "bufet"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.710024, 48.038834]
+      },
+      "properties": {
+        
+        "name": "Prístavisko Jahodná",
+        "description": "nástup / výstup, bufet",
+        "type": ["prístavisko", "bufet"]
+      }
+    }, 
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.776952, 48.020668]
+      },
+      "properties": {
+        
+        "name": "Kemping Trstice",
+        "description": "nástup / výstup, kemp, bufet",
+        "type": ["prístavisko", "bufet", "kemp"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.886075, 47.947680]
+      },
+      "properties": {
+        
+        "name": "Bufet Štefan (prístavisko Veľký ostrov)",
+        "description": "nástup / výstup, bufet",
+        "type": ["prístavisko", "bufet"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.982146, 47.930614]
+      },
+      "properties": {
+        
+        "name": "Most Kolarovo",
+        "description": "",
+        "type":["most"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.003250, 47.927537]
+      },
+      "properties": {
+        
+        "name": "Sútok s Váhom",
+        "description": "sútok riek",
+        "type":["sútok"]
+      }
+    }      
+  ]
+}

@@ -1,0 +1,113 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.238123, 47.990268]
+        },
+        "properties": {
+          "name": "Kemp Aranykárász",
+          "description": "nástup/ výstup, kemp, bufet",
+          "type": ["prístavisko", "kemp", "bufet"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.321773, 47.885280]
+        },
+        "properties": {
+          "name": "Party Csárda",
+          "description": "nástup/ výstup, kemp, bufet",
+          "type": ["prístavisko", "kemp", "bufet"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.291905, 47.874100]
+        },
+        "properties": {
+          "name": "Bufet Itató",
+          "description": "nástup/ výstup, bufet",
+          "type": ["prístavisko", "bufet"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.287610, 47.842636]
+        },
+        "properties": {
+          "name": "Priehrada Mosonmagyaróvár",
+          "description": "Prejazdné v ľavo - podľa značenia.",
+          "type": ["priehrada"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.355601, 47.814763]
+        },
+        "properties": {
+          "name": "Cvika kemp",
+          "description": "nástup/ výstup, kemp, bufet",
+          "type": ["prístavisko", "kemp", "bufet"]
+        }
+      }, 
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.501213, 47.781807]
+        },
+        "properties": {
+          "name": "Dunaszentpál kemp",
+          "description": "nástup/ výstup, kemp, bufet",
+          "type": ["prístavisko", "kemp", "bufet"]
+        }
+      }, 
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.572245,  47.709393]
+        },
+        "properties": {
+          "name": "sútok s Rábca",
+          "description": "",
+          "type": ["sútok"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.621328,  47.694630]
+        },
+        "properties": {
+          "name": "Gyor brana",
+          "description": "",
+          "type": ["ine"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.630299,  47.690534]
+        },
+        "properties": {
+          "name": "Sútok Rába",
+          "description": "",
+          "type": ["sútok"]
+        }
+      }   
+    ]
+  }
