@@ -11,10 +11,9 @@ function loadGeoJSON(url) {
   const map = L.map("map", {}).setView([48.15, 17.2], 12);
   map.addControl(new L.Control.Fullscreen());
   
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "© OpenStreetMap contributors",
+  const streetMap = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
   }).addTo(map);
-
 
   // Premenné na dynamickú prácu
   let routeLayer = null;
@@ -32,10 +31,17 @@ function loadGeoJSON(url) {
     minimumResultsForSearch: Infinity,
   });
   
+  let riverRequest = 0;
+  let riverOverview = null;
+
   // Keď vyberieme rieku
   $("#river-select").on("change", function () {
     const selectedRiver = $(this).val();
     if (!selectedRiver) return;
+    const request = ++riverRequest;
+    removeExistingLayers();
+    if (riverOverview) map.removeLayer(riverOverview);
+    $("#river-status").text("Načítavam rieku…");
   
     // Skrytie a resetovanie selectov pre štart a cieľ
     $("#start-end-selects").hide();
@@ -48,9 +54,14 @@ function loadGeoJSON(url) {
       loadGeoJSON(`/geojson/${selectedRiver}/river.geojson`),
       loadGeoJSON(`/geojson/${selectedRiver}/points.geojson`)
     ).done(function (riverData, pointsData) {
+      if (request !== riverRequest) return;
       riverGeoJSON = riverData[0];
       pointsGeoJSON = pointsData[0];
   
+      riverOverview = L.geoJSON(riverGeoJSON, { style: { color: "#246ba6", weight: 3, opacity: 0.45 } }).addTo(map);
+      map.fitBounds(riverOverview.getBounds(), { padding: [30, 30] });
+      $("#river-status").text("Rieka je pripravená. Vyberte štart a cieľ.");
+
       // Pridanie aktuálnej polohy
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -73,9 +84,12 @@ function loadGeoJSON(url) {
       removeExistingLayers();
       // Zobrazenie selectov pre štart a cieľ
       $("#start-end-selects").show();
-      $("#start-select, #end-select").on("change", function () {
+      $("#start-select, #end-select").off("change.route").on("change.route", function () {
         calculateAndRenderRoute();
       });
+    }).fail(function () {
+      if (request !== riverRequest) return;
+      $("#river-status").text("Rieku sa nepodarilo načítať. Skúste ju vybrať znova.");
     });
   });
   
@@ -272,11 +286,11 @@ function loadGeoJSON(url) {
     const distance = turf.length(route, { units: "kilometers" });
   
     // Vykreslenie trasy a vzdialenosti
-    routeLayer = L.geoJSON(route, { style: { color: "red", weight: 3 } }).addTo(
+    routeLayer = L.geoJSON(route, { style: { color: "#dc2626", weight: 5 } }).addTo(
       map
     );
     $("#distance-info").html(
-      `Vzdialenosť medzi miestami je <strong>${distance.toFixed(2)} km.<strong>`
+      `Vzdialenosť medzi miestami je <strong>${distance.toFixed(2)} km.</strong>`
     );
   }
   
@@ -322,4 +336,3 @@ function loadGeoJSON(url) {
     calculateAndRenderRoute();
   }
 });
-  

@@ -1,0 +1,47 @@
+name: Deploy Vodacka navigacia
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rieky-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      DEPLOY_HOST: shell.r5.websupport.sk
+      DEPLOY_PORT: '26800'
+      DEPLOY_USER: uid1083961
+      DEPLOY_WEBROOT: /data/d/c/dcd5ea33-2c96-443d-9288-ab7942f77b67/hurtis.sk/sub/rieky
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check JavaScript and GeoJSON
+        run: |
+          node --check js/main.js
+          python3 -c 'import json,pathlib; [json.loads(p.read_text()) for p in pathlib.Path("geojson").rglob("*.geojson")]'
+      - name: Configure SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.WEBSUPPORT_SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.WEBSUPPORT_SSH_KNOWN_HOSTS }}
+        run: |
+          test -n "$SSH_PRIVATE_KEY" || { echo 'Missing SSH private key'; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo 'Missing SSH known hosts'; exit 1; }
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/deploy_key ~/.ssh/known_hosts
+      - name: Deploy static files
+        run: bash scripts/deploy-websupport.sh
+      - name: Check production
+        run: curl --fail --silent --show-error --retry 3 --retry-delay 5 --retry-all-errors https://rieky.hurtis.sk/ -o /dev/null
+      - name: Remove SSH key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
