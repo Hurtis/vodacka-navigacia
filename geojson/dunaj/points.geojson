@@ -12,6 +12,114 @@
           "description": "nástup/ výstup, kemp, bufet",
           "type": ["sutok","prístavisko","pamiatka"]
         }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.013946, 48.153027]
+        },
+        "properties": {
+          "name": "Karloveská zátoka (začiatok)",
+          "description": "",
+          "type": ["sutok"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.07092, 48.143908]
+        },
+        "properties": {
+          "name": "Karloveská zátoka (koniec)",
+          "description": "nástup/ výstup, bufet",
+          "type": ["sutok","prístavisko"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.099184, 48.139067]
+        },
+        "properties": {
+          "name": "Bratislavský hrad",
+          "description": "",
+          "type": ["pamiatka"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.124195, 48.136896]
+        },
+        "properties": {
+          "name": "VK Dunajčík",
+          "description": "nástup/ výstup",
+          "type": ["prístavisko"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.140031, 48.099656]
+        },
+        "properties": {
+          "name": "Zátoka Zuzana",
+          "description": "",
+          "type": ["sutok"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.156191, 48.073416]
+        },
+        "properties": {
+          "name": "Jarovecké rameno",
+          "description": "Bufet v ramene",
+          "type": ["sutok, bufet"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.190002, 48.050708]
+        },
+        "properties": {
+          "name": "Bufet Polder",
+          "description": "Bufet v ramene",
+          "type": ["bufet"]
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.190002, 48.050708]
+        },
+        "properties": {
+          "name": "Bufet pri Poldri",
+          "description": "Bufet v ramene",
+          "type": ["bufet"]
+        }
+      },
+      { 
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [17.233661, 48.034004]
+        },
+        "properties": {
+          "name": "Danubiana",
+          "description": "nástup/ výstup",
+          "type": ["prístavisko","pamiatka"]
+        }
       }
     ]
 }
